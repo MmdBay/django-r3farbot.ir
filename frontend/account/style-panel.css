@@ -1,0 +1,224 @@
+@import url(../style/style.css);
+/* ---------------------------------------- */
+
+#panel{
+    background-image: url(../images/back/\@WallPaper_PC\ \(0005\).jpg);
+    /* background-attachment: fixed; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#panel .panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+}
+#panel .panel h3 {
+    text-align: center;
+    color: rgb(204, 165, 39);
+    font-size: 18px;
+    font-family: aviny;
+    letter-spacing: 1px;
+}
+#panel .panel h3::before {
+    content: url(../images/icon/icons8-login-42\(2\).png);
+    display: inline-block;
+    transform: translateY(8px) translateX(8px);
+}
+#panel .panel h2 {
+    text-align: center;
+    color: rgb(204, 165, 39);
+    font-size: 18px;
+    font-family: aviny;
+    letter-spacing: 1px;
+}
+#panel .panel h2::before {
+    content: url(../images/icon/icons8-add-user-male-42.png);
+    display: inline-block;
+    transform: translateY(8px) translateX(8px);
+}
+#panel .panel form{
+    position: relative;
+    width: 95%;
+    box-shadow: 0 0 30px 4px rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 8px;
+    background-image: radial-gradient(rgba(218, 165, 20, 0.897), rgba(0, 0, 0, 0.89));
+}
+#panel .panel input{
+    margin: 8px 0;
+    background-color: rgb(172, 172, 172);
+    color: rgb(31, 31, 31);
+}
+#panel .panel input[type="text"]
+,input[type="password"]
+,input[type="tel"]
+ ,input[type="email"]  {
+    direction: ltr;
+    /* float: left; */
+    width: 80%;
+    font-family: Nunito-LightItalic;
+    padding: 15px 15px 15px 45px;
+    border-radius: 4px;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border: none;
+    font-size: 14px;
+}
+#panel .panel form small{
+    display: block;
+    text-align: center;
+    font-family: sans-black;
+    font-weight: 400;
+    margin: 5px ;
+    color: #000000;
+    font-size: 10px;
+}
+#panel .validation--input.error input{
+    box-shadow: 0 0 14px 4px #ef5350;
+}
+#panel .validation--input.success input{
+    box-shadow: 0 0 8px 2px #66bb6a;
+}
+#panel .panel .email::before {
+    content: url(../images/icon/icons8-email-male-38.png);
+    display: inline-block;
+    position: absolute;
+    transform: translateX(40px) translateY(12px);
+}
+#panel .panel .Secret::before {
+    content: url(../images/icon/icons8-key-38.png);
+    display: inline-block;
+    position: absolute;
+    transform: translateX(40px) translateY(12px);
+}
+#panel .panel .password::before {
+    content: url(../images/icon/icons8-closed-eye-38.png);
+    display: inline-block;
+    position: absolute;
+    transform: translateX(40px) translateY(12px);
+}
+#panel .panel input[type="text"]:focus,
+#panel .panel input[type="password"]:focus
+,#panel .panel input[type="tel"]:focus,
+#panel .panel input[type="email"]:focus{
+    width: 100%;
+    background-color: #02020f;
+    color: #007bff;
+    box-shadow: 0 0 14px 4px #6a7ef0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 15px 15px 15px 45px;
+}
+#panel .panel .active-input {
+    font-family: aviny;
+    text-align: center;
+    margin: 5px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+#panel .panel .active-email b{
+    font-family: Nunito-LightItalic;
+    color: #04125f;
+    font-size: 13px;
+}
+#panel .panel input[type="checkbox"]{
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px 8px;
+}
+#panel .panel .save {
+    display: inline-block;
+    font-family: aviny;
+}
+#panel .panel .froget-pass {
+    font-size: 12px;
+    font-family: sans-black;
+    color: rgb(18, 41, 119);
+}
+#panel .panel button{
+    cursor: pointer;
+    padding: 8px 18px;
+    display: inline-block;
+    color: rgb(218, 165, 32);
+    outline: none;
+    border: none;
+    background-color: rgb(31, 31, 31);
+    font-family: Sans-black;
+    border-radius: 4px;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin: 10px 5px;
+    width: 90px;
+}
+#panel .panel button:hover , #panel .panel .login-signin:hover{
+    background-color: rgb(44, 44, 44);
+    color: rgb(215, 218, 32);
+    box-shadow: 0 0 20px 3px black;
+    border: none;
+}
+#panel .panel .login-signin {
+    font-family: Sans-black;
+    color: rgb(218, 165, 32);
+    display: inline-block;
+    padding: 8px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 4px; 
+    transition: 0.3s;
+    vertical-align: middle;
+    margin: 0 5px;
+    font-size: 13px;
+    width: 90px;
+}
+.main-page {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    font-family: sans-black;
+    color: rgb(0, 0, 0);
+    padding: 4px;
+    border-bottom: 1px solid ;
+    transition: 0.3s;
+}
+.main-page:hover {
+    color: rgb(53, 53, 53);
+}
+@media  screen and (min-width:540px) {
+    #panel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        #panel .panel {
+            width: 90%;
+        }
+        #panel .panel .active-email {
+            font-size: 16px;
+        }
+        #panel .panel form small{
+            font-size: 14px;
+        }
+}
+@media  screen and (min-width:960px) {
+
+        #panel .panel {
+            width: 60%;
+        }
+        #panel .panel .active-email {
+            font-size: 16px;
+        }
+}
+@media  screen and (min-width:1240px) {
+        #panel .panel {
+            width: 40%;
+        }
+}

@@ -1,0 +1,156 @@
+@import url(../style/style.css);
+/* ---------------------------------------- */
+body {
+    background-color: #02020f;
+
+}
+#header {
+    background-image: none;
+}
+#header .background{
+    background-image: none;
+}
+#top-menu{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+}
+#header img{
+    top: 55px;
+}
+#left-botton:active {
+    transform: scale(0.8) rotate(45deg);
+}
+#header h1{
+    display: none;
+}
+#payment {
+    color: rgb(148, 148, 148);
+    background-color: #02020f;
+}
+#payment .payment {
+    margin:50px auto;
+}
+#payment .payment li{
+    line-height: 320%;
+    border-bottom: 1px solid #191e3a;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: inline-block;
+}
+#payment .payment #amount{
+    color:rgb(8, 206, 8);
+    font-family: BTitrBd;
+}
+#payment .payment li .time {
+    font-size: 12px;
+    font-family: BTitrBd;
+    display: inline-block;
+    color: #0fb5de;
+}
+#payment .payment li b {
+    background-color: #02020f;
+    /* font-family: BElm; */
+    color : #0fb5de;
+    padding: 3px;
+    font-weight: 400;
+    font-style: italic;
+}
+#redirect {
+    text-align: center;
+    transform: translateY(50px);
+}
+#redirect .timer {
+    font-size: 22px;
+    vertical-align: -2px;
+    transform: translateX(5px);
+    display: inline-block;
+    color: rgb(228, 53, 53);
+    font-family: BTitrBd;
+}
+#redirect .text--timer {
+    color: #0fb5de;
+    font-weight: 400;
+}
+#payment .payment li:nth-child(1)::before{
+    content: url(../images/icon/icons8-status-28.png);
+    display: inline-block;
+    transform: translateY(6px) translateX(4px);
+}
+#payment .payment li:nth-child(2)::before{
+    content: url(../images/icon/icons8-tracking-28.png);
+    display: inline-block;
+    transform: translateY(8px) translateX(6px);
+}
+#payment .payment li:nth-child(3)::before{
+    content: url(../images/icon/icons8-order-history-28.png);
+    display: inline-block;
+    transform: translateY(6px) translateX(8px);
+}
+#payment .payment li:nth-child(4)::before{
+    content: url(../images/icon/icons8-receive-amount-28.png);
+    display: inline-block;
+    transform: translateY(6px) translateX(6px);
+}
+#payment .payment li:nth-child(5)::before{
+    content: url(../images/icon/icons8-card-verification-value-28.png);
+    display: inline-block;
+    transform: translateY(6px) translateX(7px);
+}
+#payment .payment li:nth-child(6)::before{
+    content: url(../images/icon/icons8-cryptography-28.png);
+    display: inline-block;
+    transform: translateY(8px) translateX(7px);
+}
+#payment .payment li:nth-child(7)::before{
+    content: url(../images/icon/icons8-date-28.png);
+    display: inline-block;
+    transform: translateY(4px) translateX(8px);
+}
+@media screen and (min-width:540px) {
+    #payment .payment li{
+        font-size: 16px;
+    }
+    #payment .payment li .time {
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+    #payment .payment li:nth-child(1)::before{
+        content: url(../images/icon/icons8-status-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(4px);
+    }
+    #payment .payment li:nth-child(2)::before{
+        content: url(../images/icon/icons8-tracking-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(8px);
+    }
+    #payment .payment li:nth-child(3)::before{
+        content: url(../images/icon/icons8-order-history-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(8px);
+    }
+    #payment .payment li:nth-child(4)::before{
+        content: url(../images/icon/icons8-receive-amount-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(6px);
+    }
+    #payment .payment li:nth-child(5)::before{
+        content: url(../images/icon/icons8-card-verification-value-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(7px);
+    }
+    #payment .payment li:nth-child(6)::before{
+        content: url(../images/icon/icons8-cryptography-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(7px);
+    }
+    #payment .payment li:nth-child(7)::before{
+        content: url(../images/icon/icons8-date-38.png);
+        display: inline-block;
+        transform: translateY(10px) translateX(10px);
+    }
+}

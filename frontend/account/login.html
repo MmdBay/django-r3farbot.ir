@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="{% static  'style/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static  'account/style-panel.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'icon/icons8-music-robot-42.png' %}">
+    <script src="{% static 'js/valid2.js' %}" defer></script>
+    <title> ورود - R3FarBot </title>
+</head>
+<body>
+    <div id="panel">
+        <div class="panel">
+            <form id="signin" action="/account/login/" method="post" enctype="application/x-www-form-urlencoded">{% csrf_token %}
+                <h3>وارد شوید</h3>
+                <br>
+                <div class="validation--input">
+                <input id="email2" type="email" name="email"  placeholder="Email">
+                <i class="email"></i>
+                <small></small>
+                <p class="active-input">
+                {% if email %}
+                <label>این <b>{{email}}</b> داخل سایت وجود ندارد</label>
+                {% endif %}
+                </p>
+            </div>
+            <div class="validation--input">
+                <input id="password2" type="password" name="password" placeholder="Password">
+                <i class="password"></i>
+                <small></small>
+                <p class="active-input">
+                {% if password %}
+                                <label>پسورد اشتباه است</label>
+                {% endif %}
+                </p>
+                </div>
+                <input type="checkbox"><label class="save">مرا بخاطر داشته باش !</label> <a href="#" class="froget-pass">فراموشی رمز عبور</a>
+                <br>
+                <button>ورود</button>
+                <a href="/account/signup/" class="login-signin">ثبت نام کنید</a>
+            </form>
+            <a href="/" class="main-page">صفحه اصلی</a>
+        </div>
+    </div>
+    </body>
+</html>

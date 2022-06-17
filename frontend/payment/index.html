@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'payment/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/icon/icons8-music-robot-42.png' %}">
+    <script src="{% static 'js/payment.js' %}" defer></script>
+    <title> سفارش - R3FarBot </title>
+</head>
+<body>
+    <div id="payment">
+        <div class="payment col-xs-11 col-md-8">
+            <ul>
+                <li>وضعیت تراکنش : <b> {{pay_status}}</b> </li>
+                <li>کد رهگیری آیدی پی : <b> {{pay_track_id}} </b> </li>
+                <li>شماره سفارش پذیرنده : <b> {{pay_order_id}} </b> </li>
+                <li>مبلغ : <b id="amount"> {{pay_amount}} </b> </li>
+                <li>شماره کارت پرداخت کننده : <b> {{pay_card_number}} </b> </li>
+                <li>هش شماره کارت پرداخت کننده : <b> {{pay_hashed_card_number}} </b> </li>
+                <li> تاریخ انجام تراکنش : <b class="time"> {{pay_date}} </b> </li>
+                <p id="redirect"> <span class="timer"></span>&nbsp<span class="text--timer"></span></p>
+            </ul>
+        </div>
+    </div>
+    </body>
+</html>

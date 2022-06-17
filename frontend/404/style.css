@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url(../style/style.css);
+/* ------------------------------- varibals css -------------------------------- */
+:root {
+    --color-hack: #8ae234;
+    --color-hack2: #75507b;
+    --color-red:rgb(255, 0, 0);
+    --back-404: radial-gradient(rgb(29, 23, 23),rgb(26, 23, 12));
+}
+/* ------------------------------ main style ------------------------------------- */
+html,
+body{
+    direction: rtl;
+    margin: 0;
+    background-image: var(--back-404);
+    user-select: none;
+}
+
+#Not-Found {
+    color: #8ae234;
+    font-family: BTitrBd;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#Not-Found .lost {
+    padding: 8px;
+    font-size: 22px;
+    font-weight: 100;
+    animation: hide-2 .01s infinite;
+    -webkit-animation: hide-2 .01s infinite;
+    -moz-animation: hide-2 .01s infinite;
+    -o-animation: hide-2 .01s infinite;
+}
+@keyframes hide-2 {
+    0%,5%{ color: var(--color-hack); }
+    5%,25% { color: transparent; };
+    25%,50%{ color: var(--color-hack); };
+    50%,75% { color: transparent;};
+    75%,95%{ color: var(--color-hack); }
+    95%,100%{ color: var(--color-hack); }
+}
+#Not-Found {
+    padding: 20px 0;
+}
+#Not-Found .nothing {
+    font-size: 150px;
+    animation: nothing .1s infinite linear;
+    -webkit-animation: nothing .1s infinite linear;
+    -moz-animation: nothing .1s infinite linear;
+    -o-animation: nothing .1s infinite linear;
+  }
+  @keyframes nothing {
+    100%{ transform: translate(-2%, -2%); }
+}
+#Not-Found .lost-1 {
+    animation: lost-1 .05s infinite;
+    -webkit-animation: lost-1 .05s infinite;
+    -moz-animation: lost-1 .05s infinite;
+    -o-animation: lost-1 .05s infinite;
+}
+#Not-Found .lost-1 h2{
+    font-size: 20px;
+    padding: 12px 0;
+}
+@keyframes lost-1 {
+    0%,5%{ color: var(--color-hack); }
+    5%,25% { color: var(--color-hack)};
+    25%,50%{ color: var(--color-red); };
+    50%,75% { color: transparent; };
+    75%,95%{ color: var(--color-red); }
+    95%,100%{ color: var(--color-hack2); }
+}
+.redirect {
+    background-color: var(--color-hack);
+    border-radius: 5px;
+    font-family: Audiowide;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+.redirect a{
+    display: inline-block;
+    padding: 12px 8px;
+    color: #75507b;
+    z-index: 2;
+    transition: .2s;
+}
+.redirect a:hover{
+    color: var(--color-hack);
+}
+.redirect .top-right {
+    width: 0;
+    position: absolute;
+    height: 0;
+    top: 0;
+    right: 0;
+    transition: .2s ease-in-out;
+    background-color: var(--color-hack2);
+}
+.redirect .top-left {
+    width: 0;
+    position: absolute;
+    height: 0;
+    top: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+    background-color: var(--color-hack2);
+}
+.redirect:hover .top-right{
+    height: 50%;
+    width: 50%;
+    transition: .2s ease-in-out;
+}
+.redirect:hover .top-left{
+    height: 50%;
+    width: 50%;
+    transition: .5s ease-in-out;
+}
+.redirect .bottom-right {
+    width: 0;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    transition: .7s ease-in-out;
+    background-color: var(--color-hack2);
+}
+.redirect .bottom-left {
+    width: 0;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    transition: .9s ease-in-out;
+    background-color: var(--color-hack2);
+}
+.redirect:hover .bottom-right{
+    height: 50%;
+    width: 50%;
+    transition: .7s ease-in-out;
+}
+.redirect:hover .bottom-left{
+    height: 50%;
+    width: 50%;
+    transition: .2s ease-in-out;
+}
+/* ---------------------------------------------- media ----------------------------------------- */
+
+@media screen and (min-width:540px) {
+    #Not-Found .lost {
+        font-size: 30px;
+    }
+    #Not-Found .nothing {
+        font-size: 192px;
+    }
+    #Not-Found .lost-1 {
+        font-size: 24px;
+    }
+    .redirect {
+    }
+    .redirect a{
+        padding: 15px 13px;
+        font-size: 1.2em;
+    }
+}
+@media screen and (min-width:1240px) {
+    #Not-Found .lost {
+        height: 15vh;
+        font-size: 28px;
+    }
+    #Not-Found .nothing {
+        font-size: 260px;
+    }
+    #Not-Found .lost-1 h2{
+        font-size: 30px;
+    }
+    .redirect a{
+        padding: 18px 19px;
+        font-size: 22px;
+    }
+}

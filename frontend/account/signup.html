@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'account/style-panel.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/icon/icons8-music-robot-42.png' %}">
+    <script src="{% static 'js/valid.js' %}" defer></script>
+    <title> ثبت نام - R3FarBot </title>
+</head>
+<body>
+    <div id="panel">
+        <div class="panel">
+            <form id="signup" name="form" action="/account/signup/" method="POST" enctype="application/x-www-form-urlencoded">
+                {% csrf_token %}
+                <h3>ثبت نام</h3>
+                <br>
+                <div class="validation--input">
+                <input type="email" name="email" id="email" placeholder="email" autocomplete="off">
+                <i class="email"></i>
+                <small></small>
+                <p class="active-input">
+                {% if status %}
+                <label>این <b>{{status}}</b> داخل سایت وجود دارد</label>
+                {% endif %}
+                </p>
+            </div>
+            <div class="validation--input">
+                <input type="text" name="private_key" id="secret_key"  placeholder="Secret Key" autocomplete="off">
+                <i class="Secret"></i>
+                <small></small>
+                <p class="active-input">
+                {% if private_key %}
+                <label><a href="https://t.me/youtubedownloaderes_bot" target="_blank"> {{ private_key }}</a> </label>
+                {% endif %}
+                </p>
+            </div>
+            <div class="validation--input">
+                <input type="password" name="password" min="8" max="16" id="password" placeholder="Password" autocomplete="off">
+                <i class="password"></i>
+                <small></small>
+                </div>
+                <div class="validation--input">
+                    <input type="password" name="confrim_password" min="8" max="16" id="confirm-password" placeholder="Confrim Password" autocomplete="off">
+                    <i class="password"></i>
+                    <small></small>
+                    </div>
+                <input type="checkbox"><label class="save">مرا بخاطر داشته باش !</label>
+                <br>
+                <button id="suginup">ثبت نام</button>
+                <a href="/account/login/" class="login-signin">ورود</a>
+            </form>
+            <a href="/" class="main-page">صفحه اصلی</a>
+        </div>
+    </div>
+    </body>
+</html>

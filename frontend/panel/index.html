@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'panel/style.css' %}">
+    <script src="{% static 'js/jquery.js' %}" defer></script>
+    <script src="{% static 'js/panel.js' %}" defer></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/icon/icons8-music-robot-42.png' %}">
+    <title> پنل کاربری - R3FarBot </title> 
+</head>
+    <body>
+        <div id="panel">
+            <div class="wrapper">
+                <div class="row">
+                        <section id="sec" class="info--panel  col-xs-12">
+                            <h1 class="info---h1">اطلاعات پنل شما</h1>
+                            <div class="info--user col-xs-10 col-sm-6 col-md-5">
+                            <article class="post">
+                                <h4 class="info--plan one"> مشخصات شما</h4>
+                                <ul class="list--info">
+                                    <li class="lists--info"> نام : <b>{{ name }}</b></li>
+                                    <li class="lists--info"> چت آیدی : <b>{{ chat_id }}</b></li>
+                                    <li class="lists--info"> ایمیل : <b>{{ email }}</b></li>
+                                    <li id="sec-privet" class="lists--info"> سکرت کی : <b>{{ private_key }}</b></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="info--user col-xs-10 col-sm-6 col-md-5">
+                            <article class="post">
+                                <h4 class="info--plan two">مشخصات پلن</h4>
+                                <ul class="list--info">
+                                    <li class="lists--info">نوع پلن : <b> {{ plan }}</b></li>
+                                    <li class="lists--info">تاریخ خرید : <b> {{ buy_date }}</b></li>
+                                    <li class="lists--info">تاریخ انقضا : <b> {{ expire_date }}</b></li>
+                                    <li class="lists--info">وضعیت : <b id="check-active"> {{ status }}</b></li>
+                                </ul>
+                            </article>
+                        </div> <br>
+                        <div class="info--user download col-xs-10 col-sm-6 col-md-4 col-lg-3">
+                            <article class="post">
+                                <h4 class="info--plan tree">وضعیت یوتیوب دانلودر</h4>
+                                    <div id="nav-icon">
+                                        <span></span>
+                                        <span></span>
+                                      </div>
+                                <ul class="list--info youtobe">
+                                    <li class="lists--info">حجم دانلود امروز : <b> {{ down_usage_y }}</b></li>
+                                    <li class="lists--info">حجم باقیمانده امروز : <b> {{ remain_time_y }}</b></li>
+                                    <li class="lists--info">تعداد دانلود ها : <b>{{ downloads_y }}</b></li>
+                                    <li class="lists--info">تعداد خرید ها : <b> {{ buy_counts }}</b></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="info--user download col-xs-10 col-sm-6 col-md-4 col-lg-3">
+                            <article class="post">
+                                <h4 class="info--plan tree">وضعیت اینستا دانلودر</h4>
+                                <div id="nav-icon1">
+                                    <span></span>
+                                    <span></span>
+                                  </div>
+                                <ul class="list--info insta">
+                                    <li class="lists--info">حجم دانلود امروز : <b> {{ down_usage_i }}</b></li>
+                                    <li class="lists--info">حجم باقیمانده امروز : <b> {{ remain_time_i }}</b></li>
+                                    <li class="lists--info">تعداد دانلود ها : <b>{{ downloads_i }}</b></li>
+                                    <li class="lists--info">وضعیت اکانت : <b> {{ acc_status_i }}</b></li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="info--user download col-xs-10 col-sm-6 col-md-4 col-lg-3">
+                            <article class="post">
+                                <h4 class="info--plan tree">وضعیت یو آر ال آپلودر</h4>
+                                <div id="nav-icon2">
+                                    <span></span>
+                                    <span></span>
+                                  </div>
+                                <ul class="list--info url">
+                                    <li class="lists--info">حجم دانلود امروز : <b> {{ down_usage_u }}</b></li>
+                                    <li class="lists--info">حجم باقیمانده امروز : <b> {{ remain_time_u }}</b></li>
+                                    <li class="lists--info">تعداد دانلود ها : <b>{{ downloads_u }}</b></li>
+                                    <li class="lists--info">وضعیت اکانت : <b> {{ acc_status_u }}</b></li>
+                                </ul>
+                            </article>
+                        </div>
+                        </section>
+                        <div class="logout">
+                            <a href="/account/logout/">خروج از پنل کاربری</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

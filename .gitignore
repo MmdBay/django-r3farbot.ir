@@ -1,0 +1,6 @@
+.idea/
+.venv/
+*.pyc
+database/
+.database/
+migrations.sh
