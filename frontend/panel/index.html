@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="{% static 'style/grid.css' %}">
-    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'public/output.css' %}">
     <link rel="stylesheet" href="{% static 'panel/style.css' %}">
     <script src="{% static 'js/jquery.js' %}" defer></script>
     <script src="{% static 'js/panel.js' %}" defer></script>
@@ -22,7 +22,7 @@
                             <h1 class="info---h1">اطلاعات پنل شما</h1>
                             <div class="info--user col-xs-10 col-sm-6 col-md-5">
                             <article class="post">
-                                <h4 class="info--plan one"> مشخصات شما</h4>
+                                <h4 class="info--plan"> مشخصات شما</h4>
                                 <ul class="list--info">
                                     <li class="lists--info"> نام : <b>{{ name }}</b></li>
                                     <li class="lists--info"> چت آیدی : <b>{{ chat_id }}</b></li>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="info--user col-xs-10 col-sm-6 col-md-5">
                             <article class="post">
-                                <h4 class="info--plan two">مشخصات پلن</h4>
+                                <h4 class="info--plan">مشخصات پلن</h4>
                                 <ul class="list--info">
                                     <li class="lists--info">نوع پلن : <b> {{ plan }}</b></li>
                                     <li class="lists--info">تاریخ خرید : <b> {{ buy_date }}</b></li>
@@ -44,8 +44,10 @@
                         </div> <br>
                         <div class="info--user download col-xs-10 col-sm-6 col-md-4 col-lg-3">
                             <article class="post">
-                                <h4 class="info--plan tree">وضعیت یوتیوب دانلودر</h4>
+                                <h4 id="you_bot" class="info--plan">وضعیت یوتیوب دانلودر</h4>
                                     <div id="nav-icon">
+                                        <span></span>
+                                        <span></span>
                                         <span></span>
                                         <span></span>
                                       </div>
@@ -59,10 +61,12 @@
                         </div>
                         <div class="info--user download col-xs-10 col-sm-6 col-md-4 col-lg-3">
                             <article class="post">
-                                <h4 class="info--plan tree">وضعیت اینستا دانلودر</h4>
+                                <h4 id="insta_bot" class="info--plan">وضعیت اینستا دانلودر</h4>
                                 <div id="nav-icon1">
-                                    <span></span>
-                                    <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
                                   </div>
                                 <ul class="list--info insta">
                                     <li class="lists--info">حجم دانلود امروز : <b> {{ down_usage_i }}</b></li>
@@ -74,10 +78,12 @@
                         </div>
                         <div class="info--user download col-xs-10 col-sm-6 col-md-4 col-lg-3">
                             <article class="post">
-                                <h4 class="info--plan tree">وضعیت یو آر ال آپلودر</h4>
+                                <h4 id="url_bot" class="info--plan">وضعیت یو آر ال آپلودر</h4>
                                 <div id="nav-icon2">
-                                    <span></span>
-                                    <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
                                   </div>
                                 <ul class="list--info url">
                                     <li class="lists--info">حجم دانلود امروز : <b> {{ down_usage_u }}</b></li>
@@ -89,10 +95,11 @@
                         </div>
                         </section>
                         <div class="logout">
-                            <a href="/account/logout/">خروج از پنل کاربری</a>
+                            <a href="/account/logout">خروج از پنل کاربری</a>
                         </div>
                 </div>
             </div>
         </div>
+    <div id="arz"></div>
     </body>
 </html>

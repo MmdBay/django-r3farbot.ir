@@ -8,7 +8,7 @@ const checkEmail = () => {
     if (!isRequired(email)) {
         showError(emailEl, 'ایمیل نمیتواند خالی باشد!');
     } else if (!isEmailValid(email)) {
-        showError(emailEl, 'فرمت ایمیل درست نیست!')
+        showError(emailEl, 'فرمت ایمیل صحیح نیست!')
     } else {
         showSuccess(emailEl);
         valid = true;
@@ -101,3 +101,7 @@ form.addEventListener('input', debounce(function (e) {
             break;
     }
 }));
+
+
+
+
