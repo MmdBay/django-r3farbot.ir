@@ -3,8 +3,9 @@ import multiprocessing
 import requests
 import pytz
 import math
+from config import core
 
-bot_token = ""
+bot_token = core.Main.BOT_TOKEN
 
 
 def get_users(_queue: multiprocessing.Queue):

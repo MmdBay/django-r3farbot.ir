@@ -4,3 +4,4 @@
 database/
 .database/
 migrations.sh
+config/

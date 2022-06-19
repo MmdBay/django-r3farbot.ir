@@ -90,7 +90,7 @@ DATABASES = {
     'default': {},
     'site': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
+        'NAME': 'sites',
         'USER': 'root',  # write your database USER
         'PASSWORD': 'ram1999',  # write your database PASSWORD
         'HOST': 'db',  # write your database HOST
@@ -98,7 +98,7 @@ DATABASES = {
     },
     'youtube': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
+        'NAME': 'db_youtubebot',
         'USER': 'root',
         'PASSWORD': 'ram1999',
         'HOST': 'db',
@@ -106,7 +106,7 @@ DATABASES = {
     },
     'insta': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
+        'NAME': 'db_instagrambot',
         'USER': 'root',
         'PASSWORD': 'ram1999',
         'HOST': 'db',
@@ -114,7 +114,7 @@ DATABASES = {
     },
     'url': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
+        'NAME': 'db_urluploaderbot',
         'USER': 'root',
         'PASSWORD': 'ram1999',
         'HOST': 'db',
@@ -122,7 +122,7 @@ DATABASES = {
     },
     'file_y': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
+        'NAME': 'db_fileinfo',
         'USER': 'root',
         'PASSWORD': 'ram1999',
         'HOST': 'db',

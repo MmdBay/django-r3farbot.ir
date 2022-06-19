@@ -2,10 +2,11 @@ import datetime
 import pytz
 import jwt
 from jwt.exceptions import ExpiredSignatureError
+from config import core
 
-SECRET_KEY = "9fba12bc2a8d69d57217ee0d1692123f0c9ff06a365b51e627acdc596e1e3826d57d934c01374f6bb34d48900d04a4c1f51b8577499a5295ef3cf1ff3d838dee"  # paste secret key here | run openssl rand -hex 64
+SECRET_KEY = core.Main.SECRET_KEY  # paste secret key here | run openssl rand -hex 64
 ALGORITHM = "HS256"
-TOKEN_EXPIRE = 60 * 24  # one day
+TOKEN_EXPIRE = 60 * 60 * 24  # one day
 
 
 def encode(data: dict):

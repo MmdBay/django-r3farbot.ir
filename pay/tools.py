@@ -1,12 +1,13 @@
 from persiantools.jdatetime import JalaliDateTime, timedelta
 import requests
 import pytz
+from config import core
 
 
 def create_payment(order_id: str, amount: int, callback: str):
     try:
-        headers = {"Content-Type": "application/json", "X-API-KEY": "",
-                   "X-SANDBOX": "0"}  # change X-SANDBOX to 0, 1 is for tese
+        headers = {"Content-Type": "application/json", "X-API-KEY": core.Main.API_KEY,
+                   "X-SANDBOX": "0"}  # change X-SANDBOX to 0, 1 is for test
         data = {"order_id": order_id, "amount": amount, "callback": callback}
         response = requests.post(url="https://api.idpay.ir/v1.1/payment", json=data, headers=headers, timeout=60)
         if response.status_code == 201:
@@ -17,7 +18,7 @@ def create_payment(order_id: str, amount: int, callback: str):
 
 def verify_payment(idpay_id: str, order_id: str):
     try:
-        headers = {"Content-Type": "application/json", "X-API-KEY": "",
+        headers = {"Content-Type": "application/json", "X-API-KEY": core.Main.API_KEY,
                    "X-SANDBOX": "0"}
         data = {"order_id": order_id, "id": idpay_id}
         response = requests.post(url="https://api.idpay.ir/v1.1/payment/verify", json=data, headers=headers, timeout=60)

@@ -259,3 +259,18 @@ def logout(request: HttpRequest):
 
         return response
 
+
+def return404(request: HttpRequest, exception):
+
+    response = redirect("/404/")
+    return response
+
+
+def error404(request: HttpRequest):
+    response = render(
+        request,
+        '404/index.html',
+        context={}
+    )
+    response.status_code = status.HTTP_404_NOT_FOUND
+    return response
