@@ -1,28 +1,26 @@
-
 <!DOCTYPE html>
-{% load static %}
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
-    <link rel="stylesheet" href="{% static 'public/output.css' %}">
-    <script src="{%  static 'js/jquery.js' %}" defer></script>
-    <script src="{% static 'js/nav.js' %}" defer></script>
-    <link rel="icon" type="image/x-icon" href="{% static 'images/icon/icons8-music-robot-42.png' %}">
-    <title> آموزش - R3FarBot </title> 
+    <link rel="stylesheet" href="{{ url_for('static', path='/style/grid.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/images/icon/icons8-music-robot-42.png') }}">
+    <script src="{{ url_for('static', path='/js/jquery.js') }}" defer></script>
+    <script src="{{ url_for('static', path='/js/nav.js') }}" defer></script>
+    <script src="{{ url_for('static', path='/js/nav.js') }}" defer></script>
+    <title> صفحه اصلی - R3FarBot </title>
 </head>
 <body>
-    <button id="scroll-top"></button>
     <div id="top-menu">
         <div class="wrapper">
                 <ul>
                     <li class="nav-item"><a href="https://tlgrm.in/r3967f">پشتیبانی</a></li>
                     <li class="nav-item"><a href="https://tlgrm.in/Aq_Qoyunlu">ارتباط با ما</a></li>
-                    <li class="nav-item"><a href="/account/signup/">ثبت نام</a></li>
-                    <li class="nav-item" id="login"><a href="/account/login/">ورود </a></li>
+                    <li class="nav-item"><a href="/account/signup">ثبت نام</a></li>
+                    <li class="nav-item" id="login"><a href="/account/login">ورود </a></li>
                 </ul>
             </div>
     </div>
@@ -30,20 +28,20 @@
         <div class="background"></div>
         <div class="wrapper">
              <ul id="cats">
-                <li class="header-item"><a href="/">صفحه اصلی</a></li>
-                <li class="header-item"><a id="buy-plan">آموزش ها</a></li>
-                <li class="header-item"><a id="abouts">درباره ما</a></li>
+                <li class="header-item"><a href="#main">خرید اشتراک ربات</a></li>
+                <li class="header-item"><a href="#footer">درباره ما</a></li>
                 <li class="header-item"><a href="https://tlgrm.in/r3967f">تبلیغات</a></li>
-                <li class="header-item"><a href="#">دیگر بخش ها <img class="plus-lg" src="{% static 'images/icon/icons8-back-48.png' %}"> <span class="plus">+</span></a>
-                    <ul class="submenu">
+                <li class="header-item"><a href="#">دیگر بخش ها <img class="plus-lg" src="{{ url_for('static', path='/images/icon/icons8-back-48.png') }}"> <span class="plus">+</span></a>
+                <ul class="submenu">
                     <li class="subitem"><a href="https://tlgrm.in/r3farbot">تلگرام ما</a></li>
-                    <li class="subitem"><a href="/learning/index.html">آموزش ها</a></li>
+                    <li class="subitem"><a href="/learning/">آموزش ها</a></li>
                     <li class="subitem"><a href="#">توصیه ها</a></li>
                     <li class="subitem"><a href="#">قوانین</a></li>
                 </ul>
                 </li>
             </ul> 
-          <img src="{% static 'images/click-nav/click-nav.png' %}" id="left-botton" class="header-botton">
+     <img src="{{ url_for('static', path='/images/click-nav/click-nav.png') }}" id="left-botton" class="header-botton">
+   <img src="{{ url_for('static', path='/images/click-nav/click-nav.png') }}" id="right-botton" class="header-botton">
             <div id="header-title">
                 <div class="logo-header">
                     <h1 style="direction:ltr;"> <a href="#">R3FarBot &#x2122;</a> </h1>
@@ -60,8 +58,8 @@
                     </ol>
             </div>
                     <div class="buy-header">
-                        <a>
-                    <img id="scroll-main" src="{% static 'images/icon/icons8-expand-arrow-96.png' %}" alt="">
+                        <a href="#main">
+                    <img src="{{ url_for('static', path='/images/icon/icons8-expand-arrow-96.png') }}" alt="">
                 </a>
                 </div>
                     <div class="header-title-container">
@@ -73,56 +71,7 @@
             </div> 
         </div>
     </div>
-    <div id="computer" class="main">
-        <div class="wrapper">
-            <div class="row">
-                <section class="sell-1">
-                    <div class="main-sell-1">
-                        <h2>آموزش ها</h2>
-                        <div class="sell-container">
-                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                <h3><span>یوتیوب دانلودر</span></h3>
-                                <video controls="controls" preload="none" poster="{% static 'images/back/you.tube_.logo_.900-1600.jpg' %}">
-                                    <source src="{% static 'video/youtube.mp4' %}"   type="video/mp4">
-                            </video>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                <h3><span>اینستا دانلودر</span></h3>
-                                <video controls="controls" preload="none" poster="{% static 'images/back/instagram-900.jpg' %}">
-                                    <source src="{% static 'video/instagram.mp4' %}"   type="video/mp4">
-                            </video>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                <h3><span>توییتر ، تیک تاک، ساند کلود دانلودر</span></h3>
-                                <video controls="controls" preload="none" poster="{% static 'images/back/twitter-900-1600.jpg' %}">
-                                    <source src="{% static 'video/tiktok-twitter-sound.mp4' %}"   type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6">
-                                <h3><span>کپشن ادیتور</span></h3>
-                                <video controls="controls" preload="metadata" poster="{% static 'images/back/caption900-1600.jpg' %}">
-                                    <source src="{% static 'video/caption.mp4' %}"   type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-              <!-- <div class="row">
-                <section class="sell-2">
-                    <h2>مقالات</h2>
-                    <div class="sell-container">
-                        <div class="col-xs-12 col-sm-6 col-md-3"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-3"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-3"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-3"></div>
-                    </div>
-                </div>
-                </section>
-            </div> -->
-            </div>
-        </div>
-        <div id="footer">
+    <div id="footer">
         <div id="foters">
             <div class="wrapper">
                 <div class="row">

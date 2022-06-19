@@ -1,27 +1,28 @@
 const check = document.getElementById('check-active');
 
-
-
 const checkAcktive = () => {
-   const checkEl = check.textContent;
-   if(checkEl.includes('Active')){
-    classActive(check)
-   } else {
+   const checkEl = check.textContent.toString().replace(/\s/g,"");
+   
+    if (checkEl.includes("Active")){
+        classActive(check)
+        return false;
+    }
+    
     classOnActive(check)
-   }
 }
+
 const classActive = (check) => {
     const activeList = check;
     activeList.classList.add('active');
 }
 const classOnActive = (check) => {
     const activeList = check;
-    activeList.classList.add('inactive');
+    activeList.classList.add('onactive');
 }
 checkAcktive()
 
-
 // ----------------- panel slideToggle jquery --------------
+
 $(function () {
     $("#nav-icon").click(function () {
         $(".youtobe").slideToggle();
@@ -39,3 +40,4 @@ $(document).ready(function(){
 		$(this).toggleClass('open');
 	});
 });
+

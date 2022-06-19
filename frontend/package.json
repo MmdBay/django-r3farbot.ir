@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  },
+  "scripts": {
+    "tail": "npx tailwindcss -i ./frontend/style/style.css -o ./frontend/public/output.css --watch",
+    "webpack": "webpack"
+  },
+  "dependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

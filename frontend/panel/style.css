@@ -1,4 +1,4 @@
-@import url(../style/style.css);
+/* @import url(../style/style.css); */
 /* ---------------------------------------- */
 body{
     direction: rtl;
@@ -21,43 +21,26 @@ body{
 }
 #panel .info--user {
     display: inline-block;
-    box-shadow: 0 0 10px 1px rgb(18, 122, 182);
-    border: 1px solid rgb(32, 82, 218);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     margin:15px;
     overflow: hidden;
     text-align: right;
     vertical-align: top;
+    background: linear-gradient(to left, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
 }
-#panel .info--user:nth-child(2){
+#panel .list--info{
     text-align: center;
-    background: linear-gradient(to left, rgb(142, 45, 226), rgb(74, 0, 224));
 }
-#panel .info--user:nth-child(3){
-    text-align: center;
-    background: linear-gradient(to left, rgb(0, 176, 155), rgb(150, 201, 61));
-}
-#panel .info--user:nth-child(5){
-    background: linear-gradient(to left, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
-}
-#panel .info--user:nth-child(6){
-    background: linear-gradient(to left, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
-}
-#panel .info--user:nth-child(7){
-    background: linear-gradient(to left, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
-}
-#panel .download {
-    height: auto;
-}
-#panel .download .post span {
+/* #panel .download .post span {
     position: absolute;
-    top: 17px;
+    top: 22px;
     left: 4px;
     padding: 3px;
     cursor: pointer;
-}
+} */
 #nav-icon,#nav-icon1,#nav-icon2 {
-    width: 25px;
+    width: 100%;
     height: 40px;
     position: absolute;
     top: 0;
@@ -73,11 +56,30 @@ body{
     transition: .5s ease-in-out;
     cursor: pointer;
   }
+  /* #nav-icon span:nth-child(1){
+      top: 5px;
+  } */
+  #nav-icon span:nth-child(1),#nav-icon1 span:nth-child(1),#nav-icon2 span:nth-child(1){
+      top: 12px;
+      left: 5px;
+  }
+  #nav-icon span:nth-child(2),#nav-icon1 span:nth-child(2),#nav-icon2 span:nth-child(2){
+    top: 22px;
+    left: 5px;
+}
+#nav-icon span:nth-child(3),#nav-icon1 span:nth-child(3),#nav-icon2 span:nth-child(3){
+    top: 22px;
+    left: 5px;
+}
+#nav-icon span:nth-child(4),#nav-icon1 span:nth-child(4),#nav-icon2 span:nth-child(4){
+    top: 32px;
+    left: 5px;
+}
   #nav-icon span,#nav-icon1 span,#nav-icon2 span {
     display: block;
     position: absolute;
     height: 4px;
-    width: 100%;
+    width: 32px;
     background-color: #d3981a;
     border-radius: 9px;
     opacity: 1;
@@ -91,46 +93,59 @@ body{
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
   }
-  #nav-icon span:nth-child(1),#nav-icon span:nth-child(2), 
-  #nav-icon1 span:nth-child(1),#nav-icon2 span:nth-child(2) {
-    top: 18px;
+  #nav-icon.open span:nth-child(1),#nav-icon1.open span:nth-child(1), 
+  #nav-icon2.open span:nth-child(1) {
+    top: 22px;
+    opacity: 0;
+    height: 0;
+    
   }
-  #nav-icon.open span:nth-child(1),  #nav-icon1.open span:nth-child(1),  #nav-icon2.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+  #nav-icon.open span:nth-child(4),#nav-icon1.open span:nth-child(4), 
+  #nav-icon2.open span:nth-child(4) {
+    bottom: 22px;
+    opacity: 0;
+    height: 0;
+  }
+  #nav-icon.open span:nth-child(2),  #nav-icon1.open span:nth-child(2),  #nav-icon2.open span:nth-child(2) {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
   }
   
-  #nav-icon.open span:nth-child(2),  #nav-icon1.open span:nth-child(2),  #nav-icon2.open span:nth-child(2) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+  #nav-icon.open span:nth-child(3),  #nav-icon1.open span:nth-child(3),  #nav-icon2.open span:nth-child(3) {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
   }
   
 #panel .info--user .info--plan {
     text-align: center;
-    color: rgb(0, 0, 0);
-    padding: 8px;
+    padding: 12px;
+    font-size: 18px;
     font-family: sans;
     transition: 0.5s;
+    background: linear-gradient(to left,rgb(44, 83, 100), rgb(32, 58, 67),rgb(15, 32, 39));
+    color: #ffffff;
+    font-weight: 400;
+    cursor: pointer;
 }
+
 .download .list--info {
     display: none;
 }
-#panel .post .plus:hover > .list--info {
-    display: block;
-}
-#panel b {
-    font-family: 'BKoodkBd','Nunito-LightItalic';
+#panel .left {
+    font-family: 'sans','Nunito-LightItalic';
     font-weight: 100;
     color: #ffffff;
-    box-shadow: 2px 2px 2px 0 rgb(24, 24, 24) inset;
     padding: 4px 8px;
     border-radius: 4px;
-    background-color: #0808b425;
     font-size: 14px;
+    text-align: left;
+    display: block;
+    line-height: 200%;
+    background: linear-gradient(to left,rgb(44, 83, 100), rgb(32, 58, 67),rgb(15, 32, 39));
 }
 #panel .lists--info #sec-privet{
     text-align: left;
@@ -141,22 +156,8 @@ body{
     line-height: 150%;
     transform: translateY(18px);
 }
-#panel .info--user .one{
-    background: linear-gradient(to left,  rgb(74, 0, 224),rgb(142, 45, 226));
-    border-bottom: 1px solid rgb(219, 166, 33);
-}
-#panel .info--user .two{
-    background: linear-gradient(to left,rgb(150, 201, 61), rgb(0, 176, 155));
-    border-bottom: 1px solid rgb(255, 251, 0)
-}
- #panel .info--user .tree{ 
-    background: linear-gradient(to left,rgb(44, 83, 100), rgb(32, 58, 67),rgb(15, 32, 39));
-    border-bottom: 1px solid rgb(223, 169, 32);
-    color: #ffffff;
-    font-weight: 200;
-}
 #panel .info--user .list--info {
-    line-height: 370%;
+    line-height: 320%;
     padding: 10px 15px;
     color: rgb(255, 255, 255);
     font-family: sans;
@@ -176,7 +177,7 @@ body{
     letter-spacing: 1px;
     background-color: rgb(31, 31, 31);
 }
-#panel #check-active.inactive{
+#panel #check-active.onactive{
     color: rgb(255, 25, 0);
     letter-spacing: 1px;
     background-color: rgb(31, 31, 31);
@@ -188,4 +189,29 @@ body{
         margin:0 auto 10px auto;
         font-size: 44px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#arz {
+    width: 70%;
+    margin: auto;
+}
+#arz p{
+    display: inline-block;
+    color: #d3981a;
+    direction: rtl;
+    padding: 4px;
+    margin: 8px;
+    width: 30%;
+    border: 1px solid;
 }

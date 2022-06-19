@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: aviny;
     src: url(../font/aviny/aviny-700.woff);
@@ -56,7 +60,7 @@
 
 body {
     direction: rtl;
-    background-color: #222528;
+    background-color: #212121;
     font-family: Sans;
     font-size: 1rem;
 }
@@ -81,6 +85,17 @@ input , textarea , submit {
     background-color: #02020f;
    }
 /*------------------ nav-main --------------*/
+#scroll-top {
+    color: #a4a5a7;
+    font-size: 88px;
+    position: fixed;
+    bottom: -35px;
+    left: 10px;
+    z-index: 999;
+}
+#scroll-top::after{
+    content: url(../images/icon/icons8-up-50.png);
+}
 #top-menu{
     background-color: rgb(21, 21, 24);
     border-bottom: 1px solid rgba(218, 165, 32, 0.699);
@@ -104,6 +119,7 @@ margin-right: auto;
 }
 #top-menu .nav-item:nth-child(1){
     margin-right: 10px;
+
 }
 #top-menu li a{
     color: rgb(185, 185, 185);
@@ -143,7 +159,7 @@ margin-right: auto;
     animation-delay: 0.5s;
 }
 #header .background{
-    background-image: url(../images/back/@WallPaper_PC\ \(0005\).jpg);
+    background-image: url(../images/back/photo_2022-05-22_03-01-36.jpg);
     width: 100%;
     height: 60vh;
     min-height: 400px;
@@ -219,6 +235,7 @@ margin-right: auto;
     font-size: 12px;
     border-bottom: 1px solid rgba(218, 165, 32, 0.699);
     transition: 0.3s;
+    cursor: pointer;
 }
 #cats li a:active {
     background-color: rgb(218, 165, 32);
@@ -468,23 +485,12 @@ margin-right: auto;
 
 /*------------------- main --------------------------------------*/
 
-#main{
-    /* background-image: url(../images/icon/2539310.jpg); */
-    border-bottom: 3px solid rgb(218, 165, 32);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 #main .wrapper{
-    background-color: #1b1e21;
+    /* background-color: #1b1e21; */
     margin: 45px auto;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     width: 95%;
-    border: 1px solid #3a3d42;
-}
-#main .back-main {
-    /* background-color: rgba(0, 0, 0, 0.116); */
+    /* border: 1px solid #3a3d42; */
 }
 #main .plan h2{
     text-align: center;
@@ -502,7 +508,6 @@ margin-right: auto;
   }
 
 #main .post{
-    font-family: aviny;
     background-image: url(../images/icon/@Wallpaper_4K3D\ \(5405\).jpg);
     background-position: center;
     background-size: cover;
@@ -516,7 +521,7 @@ margin-right: auto;
 }
 #main .golding{
     box-shadow: 5px 5px 5px 4px rgba(255, 217, 0, 0.212);
-    background-image: url(../images/back/@Wallpaper_4K3D\ \(9630\).jpg);
+    background-image: url(../images/back/@Wallpaper_4K3D\ \(9630\)\ \(1\).jpg);
     transform: scalex(1.05) scaleY(1.01);
     border-radius: 0 7% 0  7% ;
 }
@@ -596,6 +601,7 @@ margin-right: auto;
     display: inline-block;
     text-align: center;
     padding: 10px;
+    font-family: sans-black;
 }
 #main .account-buy .plan .buy--items a:hover{
     color: #24272b;
@@ -609,7 +615,7 @@ margin-right: auto;
     background-color: rgb(255, 166, 0);
     width: 0;
     height: 100%;
-    transition: .3s ease-out;
+    transition: .2s ease-out;
 }
 #main .account-buy .plan .buy--items:hover .left--buy{
     width: 50%;
@@ -620,7 +626,7 @@ margin-right: auto;
     right: 0;
     background-color: rgb(255, 166, 0);
     width: 0;
-    transition: .3s ease-out;
+    transition: .2s ease-out;
     height: 100%;
 }
 #main .account-buy .plan .buy--items:hover .right--buy{
@@ -637,9 +643,6 @@ margin-right: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.76);
 }
-/* #main .plan .golding span{
-    background-color: #C0C0C0;
-} */
 #main .plan .Bronze{
     background-color: #D2691E !important;
     color: #181818 !important;
@@ -655,16 +658,10 @@ margin-right: auto;
 /*------------------------- member static --------------------*/
 
 #member{
-    background-image:url(../images/back/dragon_classical_light_luster_surface_background_16050_2560x1080.jpg);
-    overflow: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    border-bottom: 3px solid rgb(218, 165, 32);
+    margin-bottom: 40px;
 }
-#member #members {
-    background-color: rgba(0, 0, 0, 0.541);
+#member .wrapper {
+    border-top: 1px solid #616161;
 }
 #member .container{
     line-height: 450%;
@@ -706,14 +703,12 @@ margin-right: auto;
 
 /*------------------------------ learning-compunent -------------------------------------------*/
 #computer {
-    margin: 50px 0;
+    border-top: 3px solid #D2691E;
 }
 #computer .wrapper{
-    background-color: #1b1e21;
-    border-radius: 15px;
-    border: 1px solid #3a3d42;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 95%;
+
 }
 #computer .sell-1 h2{
     color: rgb(212, 212, 212);
@@ -743,7 +738,7 @@ margin-right: auto;
 /*-------------------------------------------- footer --------------------------------*/
 
 #footer{
-    background-image: url(../images/back/@WallPaper_PC\ \(0005\).jpg);
+    background-image: url(../images/back/photo_2022-05-22_03-01-36.jpg);
     opacity: 1;
     background-position: center;
     background-size: cover;
@@ -752,10 +747,10 @@ margin-right: auto;
     background-attachment: fixed;
 }
 #footer #foters{
-    background-color: rgba(0, 0, 0, 0.932);
+    background-color: rgba(0, 0, 0, 0.82);
 }
 #footer .row{
-    padding: 50px 10px 0 10px;
+    padding: 40px 10px 0 25px;
 }
 #footer h4{
     font-size: 20px;
@@ -1033,15 +1028,12 @@ margin-right: auto;
         width: 100%;
         background-size:100%;
         opacity: 1;
-        background-image: url(../images/back/@WallPaper_PC\ \(0005\).jpg);
+        background-image: url(../images/back/photo_2022-05-22_03-01-36.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
         position: static;
-        /* position: absolute;
-        top: 0; */
-
     }
 #top-menu .nav-item:nth-child(1),#top-menu .nav-item:nth-child(2){
         border: none;
@@ -1187,7 +1179,8 @@ margin-right: auto;
     #header-title .buy-header {
         bottom: 7%;
         left: 0;
-        display: block;
+        display: flex;
+        justify-content: center;
     }
     #header-title .buy-header img{
         width: 110px;
@@ -1206,7 +1199,7 @@ margin-right: auto;
     }
 }
 
-/*--------------------------------------------- 1140px ----------------------------------------------*/
+/*----------------- 1140px -------------------------*/
 
 @media screen and (min-width:1140px) {
     

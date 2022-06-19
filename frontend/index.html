@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="{% static  'style/grid.css' %}">
-    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'public/output.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/icon/icons8-music-robot-42.png' %}">
     <script src="{% static 'js/jquery.js' %}" defer></script>
     <script src="{% static 'js/nav.js' %}" defer></script>
+    <script src="{% static 'js/index.js' %}" defer></script>
     <title> صفحه اصلی - R3FarBot </title>
 
 </head>
 <body>
+    <button id="scroll-top"></button>
     <div id="top-menu">
         <div class="wrapper">
                 <ul>
@@ -29,14 +31,14 @@
         <div class="background"></div>
         <div class="wrapper">
              <ul id="cats">
-                <li class="header-item"><a href="#main">خرید اشتراک ربات</a></li>
-                <li class="header-item"><a href="#footer">درباره ما</a></li>
+                <li class="header-item"><a id="buy-plan">خرید اشتراک ربات</a></li>
+                <li class="header-item"><a id="abouts">درباره ما</a></li>
                 <li class="header-item"><a href="https://tlgrm.in/r3967f">تبلیغات</a></li>
                 <li class="header-item"><a href="#">دیگر بخش ها <img class="plus-lg" src="{% static 'images/icon/icons8-back-48.png' %}"> <span class="plus">+</span></a>
                 <ul class="submenu">
                     <li class="subitem"><a href="https://tlgrm.in/r3farbot">تلگرام ما</a></li>
                     <li class="subitem"><a href="/learning/">آموزش ها</a></li>
-                    <li class="subitem"><a href="#">توصیه ها</a></li>
+                    <li class="subitem"><a href="{% static 'price/index.html' %}">قیمت دلار و سایر ارزها</a></li>
                     <li class="subitem"><a href="#">قوانین</a></li>
                 </ul>
                 </li>
@@ -59,8 +61,8 @@
                     </ol>
             </div>
                     <div class="buy-header">
-                        <a href="#main">
-                    <img src="{% static 'images/icon/icons8-expand-arrow-96.png' %}" alt="">
+                        <a>
+                    <img id="scroll-main" src="{% static 'images/icon/icons8-expand-arrow-96.png' %}" alt="">
                 </a>
                 </div>
                     <div class="header-title-container">
@@ -72,7 +74,7 @@
             </div> 
         </div>
     </div>
-<main id="main">
+<main id="main" class="main">
     <div class="back-main">
     <div class="wrapper">
         <div class="row">
@@ -95,7 +97,7 @@
                     <div class="buy--items">
                         <div class="right--buy"></div>
                         <div class="left--buy"></div>
-                        <a href="#">خرید اشتراک</a>
+                        <a href="">خرید اشتراک</a>
                     </div>
                 </article>
                 </div>
